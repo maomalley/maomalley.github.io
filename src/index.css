@@ -1,13 +1,281 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");*/
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes shake {
+  0%,100% {
+    transform: rotate(0deg);transform-origin: 50% 0;
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20%,40%,60% {
+    transform: rotate(-4deg);
+  }
+  30%,50%,70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+* {
+  margin: 0;
+  font-family: 'Kanit', serif;
+  /*max-width: 100vw;*/
+}
+
+.App{
+  /*margin: 0;*/
+  background-image: linear-gradient(#6596a9, #72a9be);
+  max-width: 100vw;
+}
+
+nav{
+  background: #2b6cb4;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  /*margin: 0;*/
+  width: 100vw;
+  justify-content: space-evenly;
+  height: 7vh;
+  font-size: 1.75rem;
+  float: right;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+.education{
+  list-style-position: inside;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+img{
+  height: 75vw;
+  width: 75vw;
+  max-width: 100vw;
+  max-height: 65vh;
+}
+
+a:hover{
+  color: #6596a9;
+}
+
+#welcome-section{
+  /*margin: 0;*/
+  /*padding-right: 5rem;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(#2b6cb4, rgba(113, 154, 169, 0));
+  font-family: 'Kanit', serif;
+  color: white;
+}
+
+#welcome-wrapper{
+  animation: fadeIn 5s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#name{
+  display: flex;
+  flex-direction: row;
+  font-size: 11vw;
+}
+
+#emoji{
+  animation: shake 4s ease-in 0s alternate none;
+}
+#flavor{
+  font-size: 1.5rem;
+}
+
+#about-section{
+  animation: fadeIn 5s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.about-body{
+  padding-left: 12vw;
+  padding-right: 12vw;
+  /*padding-top: 10vh;*/
+  line-height: 1.5rem;
+}
+
+#education-body{
+  width: 65vw;
+}
+
+#education-body a {
+  text-decoration: underline;
+}
+
+#about-title{
+  padding-top: 1rem;
+}
+
+.skills{
+  height: 10vh;
+  width: 10vw;
+}
+
+h2{
+  font-family: 'Kanit', serif;
+  color: white;
+  font-size: 3rem;
+}
+
+h3{
+  font-family: 'Kanit', serif;
+  color: white;
+  padding: 1rem;
+}
+
+#projects{
+  padding-top: 3rem;
+}
+
+#projects-header{
+  padding-bottom: 1rem;
+}
+
+.projects-grid{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contact{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.25) 170vw, transparent 17.1vw)
+}
+
+#contact i {
+  padding-right: 0.5rem;
+}
+
+#contact-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-links{
+  padding-top: 1rem;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#contact-links a{
+  text-decoration: underline;
+}
+
+#top{
+  padding-top: 3rem;
+  font-size: 4rem;
+  color: white;
+}
+
+
+#credits{
+  padding-top: 3rem;
+}
+#credits a {
+  text-decoration: underline;
+}
+.projects-grid a {
+  text-decoration: underline;
+}
+
+footer{
+  margin: 0;
+  background: #2b6cb4;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5rem;
+  font-size: 1rem;
+  height: 200%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  nav {
+    font-size: 4vh;
+    justify-content: right;
+    padding-right: 5rem;
+    height: 5vh;
+  }
+  nav li {
+    /*margin: 0;*/
+    padding-left: 2rem;
+  }
+
+  img {
+    width: 30vw;
+    height: 30vh;
+  }
+
+  #name{
+    font-size: 6vw;
+  }
+
+  #contact{
+    background: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.25) 45vw, transparent 17.1vw)
+  }
+
+  #welcome-section{
+    width: auto;
+  }
+
+  #about-body{
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
+
+  .projects-grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .projects-grid > div{
+    padding: 1rem;
+  }
+
 }
