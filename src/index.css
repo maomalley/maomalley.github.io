@@ -260,6 +260,12 @@ footer{
 
   #welcome-section{
     width: auto;
+    display: flex;
+    flex-direction: row;
+    min-width: 75vw;
+    /*max-width: auto;*/
+    margin: 0;
+    padding: 0;
   }
 
   #about-body{
